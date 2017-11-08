@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_general"
+    tools:context=".MainActivity">
+    <!--Add the Button: RESET-->
+    <Button
+        android:id="@+id/resetBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="10dp"
+        android:background="#80d15f"
+        android:padding="5dp"
+        android:tag="RESET"
+        android:text="RESET"
+        android:textColor="#131010"
+        android:textSize="10pt"
+        android:textStyle="bold" />
+    <!--Add the Button: START-->
+    <Button
+        android:id="@+id/startBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:background="#e6cf3a"
+        android:padding="5dp"
+        android:tag="START"
+        android:text="START"
+        android:textColor="#131010"
+        android:textSize="10pt"
+        android:textStyle="bold" />
+
+    <!--Add a TextView to display result: horseman 1 - Red Lane-->
+    <TextView
+        android:id="@+id/redLaneResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Red lane (horse 1): "
+        android:textColor="#e60b2b"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+    <!--Add a TextView to display result: horseman 2 - Green lane-->
+    <TextView
+        android:id="@+id/greenLaneResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_below="@+id/redLaneResult"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="40dp"
+        android:text="Green lane (horse 2): "
+        android:textColor="#0a8e25"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!--Add a TextView to display result: horseman 3 - Blue Lane-->
+    <TextView
+        android:id="@+id/blueLaneResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_below="@+id/redLaneResult"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="70dp"
+        android:text="Green lane (horse 3): "
+        android:textColor="#0f16d9"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!--Add an ImageView to display background-->
+    <ImageView
+        android:id="@+id/backGround"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/startBtn" />
+    <!--Add an ImageView to display racing tracks-->
+    <ImageView
+        android:id="@+id/racingTrack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/race_tracks" />
+    <!--Add an ImageView to display horseman 3: lane Blue-->
+    <ImageView
+        android:id="@+id/horseman3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="50dp"
+        android:layout_marginLeft="45dp"
+        android:src="@drawable/horseman_frame3" />
+    <!--Add an ImageView to display horseman 2: lane Green-->
+    <ImageView
+        android:id="@+id/horseman2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/racingTrack"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="20dp"
+        android:src="@drawable/horseman_frame2" />
+    <!--Add an ImageView to display horseman 1 : lane Red-->
+    <ImageView
+        android:id="@+id/horseman1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="0dp"
+        android:src="@drawable/horseman_frame1" />
+</RelativeLayout>
