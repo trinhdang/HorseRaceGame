@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_general"
+    tools:context=".MainScreen">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:text="HORSERACE GAME"
+        android:textColor="#FF0000FF"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/betText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="YOU BET THE WINNER IS:"
+        android:textColor="#e60b2b"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <RadioGroup
+        android:id="@+id/radioLaneGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/betText"
+        android:layout_centerHorizontal="true">
+
+        <RadioButton
+            android:id="@+id/redLane"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Red Lane" />
+
+        <RadioButton
+            android:id="@+id/greenLane"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Green Lane" />
+
+        <RadioButton
+            android:id="@+id/blueLane"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BLue Lane" />
+    </RadioGroup>
+
+
+    <Button
+        android:id="@+id/startRace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radioLaneGroup"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="#80d15f"
+        android:padding="5dp"
+        android:tag="START"
+        android:text="START"
+        android:textColor="#131010"
+        android:textSize="10pt"
+        android:textStyle="bold" />
+
+
+    <ImageView
+        android:id="@+id/racingTrack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/race_tracks" />
+    <!--Add an ImageView to display horseman 3: lane Blue-->
+
+    <ImageView
+        android:id="@+id/horseman3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="50dp"
+        android:layout_marginLeft="45dp"
+        android:src="@drawable/horseman_frame3" />
+
+    <!--Add an ImageView to display horseman 2: lane Green-->
+    <ImageView
+        android:id="@+id/horseman2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/racingTrack"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="20dp"
+        android:src="@drawable/horseman_frame2" />
+
+    <!--Add an ImageView to display horseman 1 : lane Red-->
+    <ImageView
+        android:id="@+id/horseman1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="0dp"
+        android:src="@drawable/horseman_frame1" />
+</RelativeLayout>
